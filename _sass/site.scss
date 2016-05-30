@@ -1,0 +1,381 @@
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  color: $text-color;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  display: block;
+  padding: 30px 0px;
+  background-color: #101818;
+  color: white;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .col {
+    width: 30%;
+    float: left;
+    padding: 0px 6px;
+  }
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+#header-bar {
+  background-color: #1c252a;
+  color: white;
+  height: 108px;
+
+  .wrapper {
+    position: relative;
+  }
+}
+
+#logo-small {
+  display: block;
+  position: relative;
+  top: 24px;
+  left: 10px;
+  background-image: url('/images/logo-small.png');
+  width: 157px;
+  height: 74px;
+}
+
+#header-nav {
+  position: absolute;
+  top: 60px;
+  left: 210px;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: white;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: $spacing-unit / 2;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        width: 18px;
+        height: 15px;
+
+        path {
+          fill: $grey-color-dark;
+        }
+      }
+    }
+
+    .trigger {
+      clear: both;
+      display: none;
+    }
+
+    &:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      margin-left: 20px;
+    }
+  }
+}
+
+#header-icons {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  text-align: right;
+  max-width: 400px;
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.9;
+  }
+
+  a.slack:hover i {
+    color: #008800;
+  }
+
+  a.twitter:hover i {
+    color: #20b5ef;
+  }
+
+  a.youtube:hover i {
+    color: #cc0000;
+  }
+
+  i {
+    font-size: 36px;
+    border-radius: 50%;
+    padding: 14px 14px 12px 14px;
+    background-color: white;
+    color: #1c252a;
+    margin: 0 8px;
+  }
+
+  i.fa-github {
+    padding: 0;
+    color: white;
+    background-color: #1c252a;
+    font-size: 72px;
+    position: relative;
+    top: 12px;
+  }
+}
+
+#banner {
+  background-color: black;
+  color: white;
+
+  .wrapper {
+    position: relative;
+    height: 400px;
+  }
+}
+
+#banner-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/images/banner-1.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+#logo {
+  position: relative;
+  top: 50px;
+  left: 170px;
+  width: 600px;
+  height: 280px;
+  background-image: url("/images/logo.png");
+  background-repeat: no-repeat;
+
+  span {
+    position: relative;
+    top: 248px;
+    display: block;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 1.2em;
+  }
+}
+
+#calendar {
+  position: relative;
+  width: 200px;
+  height: 100%;
+  background-color: #070404;
+  float: right;
+
+  .event {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: url("/images/calendar-white.png");
+    background-position: center 10px;
+    background-repeat: no-repeat;
+  }
+
+  .date {
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 55px;
+    width: 90px;
+    height: 80px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .title {
+    display: block;
+    position: absolute;
+    top: 158px;
+    left: 5px;
+    width: 190px;
+    height: 44px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+#content {
+  background-color: black;
+}
+
+#home {
+  background-color: #1f292d;
+  background: linear-gradient(#1f292d, #353b3b);
+  color: white;
+  padding: 30px 20px;
+
+  .posts {
+    list-style-type: none;
+
+    li {
+      position: relative;
+      padding: 10px 0;
+      min-height: 160px;
+    }
+
+    .post-date {
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      padding: 20px 20px;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.0em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .post-date-1 {
+      background-color: #ff3333;
+    }
+
+    .post-date-2 {
+      background-color: #00bee2;
+    }
+
+    .post-date-3 {
+      background-color: #ffb200;
+    }
+
+    .post-details {
+      position: relative;
+      left: 140px;
+      max-width: 760px;
+    }
+
+    .post-event {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      width: 170px;
+      background-color: white;
+      border-radius: 12px;
+
+      h3 {
+        margin: 8px 0;
+        font-size: 26pt;
+        text-align: center;
+        text-transform: uppercase;
+        color: #1f292d;
+      }
+
+      .post-event-data {
+        margin: 6px 12px 12px 12px;
+        background-color: #1f292d;
+        padding: 8px;
+
+        div {
+          padding: 4px 0;
+          font-size: 14px;
+
+          span {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .post-action {
+      position: absolute;
+      bottom: 0;
+      right: 220px;
+
+      a {
+        color: white;
+        font-size: 32px;
+        padding-left: 20px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+/* vim: set ts=2 sts=2 sw=2 et: */

@@ -1,0 +1,18 @@
+# Site settings
+title: DevOps Cape Town
+email: team@devops.capetown
+description: >
+  DevOps Cape Town is awesome much lots.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://devops.capetown"
+
+# Social media
+github_username:  cpt-devops
+twitter_username: cpt_devops
+youtube_channel: UCuu8jzt29J5rfGvo1cBiuog
+
+# Build settings
+markdown: kramdown
+
+# vim: set ts=2 sts=2 sw=2 et:

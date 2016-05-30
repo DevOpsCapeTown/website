@@ -1,0 +1,44 @@
+<header>
+
+  <div id="header-bar">
+    <div class="wrapper">
+      <a id="logo-small" href="/"></a>
+      <nav id="header-nav">
+        <a href="#" class="menu-icon">{% icon fa-bars %}</a>
+        <div class="trigger">
+          {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+      <div id="header-icons">
+        <a href="http://zatech.co.za/" target="_blank" class="slack">{% icon fa-slack %}</a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="github">{% icon fa-github %}</a>
+        <a href="https://www.youtube.com/channel/{{ site.youtube_channel }}" target="_blank" class="youtube">{% icon fa-youtube %}</a>
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="twitter">{% icon fa-twitter %}</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="banner">
+    <div class="wrapper">
+      <div id="banner-image"></div>
+      <div id="calendar">
+        <div class="event">
+          <span class="date">17 Jun</span>
+          <span class="title">Next Meetup</span>
+        </div>
+        <div class="event">
+          <span class="date">10-11 Nov</span>
+          <span class="title">DevOps Days CPT</span>
+        </div>
+      </div>
+      <div id="logo">
+        <span>A community for everyone who live, breathes and occasionally sleeps DevOps in Cape Town and surrounding areas.</span>
+      </div>
+    </div>
+  </div>
+
+</header>

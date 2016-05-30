@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div id="home">
+
+  <ul class="posts">
+    {% assign post_count = 0 %}
+    {% for post in site.posts %}
+      {% assign post_count = post_count | plus: 1 %}
+      <li>
+        <div class="post-date post-date-{{ post_count }}">{{ post.date | date: "%d %b %Y" }}</div>
+        <div class="post-details">
+          <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt }}</p>
+        </div>
+        {% if post.type == 'event' %}
+          <div class="post-event">
+            <h3>Info</h3>
+            <div class="post-event-data">
+              <div><span>Date:</span><br>{{ post.event.date | date: "%d %b %y" }}</div>
+              <div><span>Venue:</span><br>{{ post.event.venue }}</div>
+              <div><span>Speaker:</span><br>{{ post.event.speaker }}</div>
+              <div><span>Topic:</span><br>{{ post.event.topic }}</div>
+            </div>
+          </div>
+        {% endif %}
+        <div class="post-action">
+          <a href="#">{% icon fa-thumbs-up %}</a>
+          <a href="#">{% icon fa-share %}</a>
+        </div>
+      </li>
+      {% if post_count == 3 %}{% assign post_count = 0 %}{% endif %}
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</div>
