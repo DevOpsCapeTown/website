@@ -5,11 +5,40 @@ body {
   color: $text-color;
 }
 
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body, h4, h5, h6,
+blockquote, pre, hr,
+dl, dd, figure {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  margin: 20px 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 16px 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 12px 0;
+  padding: 0;
+}
+
+p {
+  margin: 10px 0;
+  padding: 0;
+}
+
+ol, ul {
+  margin: 10px 0 10px 10px;
+  padding: 0 0 0 10px;
+}
+
+ol li {
+  padding-left: 6px;
 }
 
 footer {
@@ -19,7 +48,13 @@ footer {
   color: white;
 
   ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+  }
+
+  h2 {
+    margin: 8px 0;
   }
 
   .col {
@@ -381,7 +416,7 @@ a {
 #page {
   background-color: white;
   color: #333;
-  padding: 40px 20px 60px 20px;
+  padding: 20px 20px 60px 20px;
 }
 
 /* vim: set ts=2 sts=2 sw=2 et: */
