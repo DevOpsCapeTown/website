@@ -1,0 +1,245 @@
+#devopsdays {
+  .button {
+    display: inline-block;
+    background-color: #07678c;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 12px 0;
+  }
+
+  #banner .wrapper {
+    background-color: #1c252a;
+    height: 400px;
+  }
+
+  #banner-image {
+    left: -40px;
+    top: 40px;
+    background-image: url("/images/dod-banner-plain-1200.png");
+    opacity: inherit;
+    width: 1200px;
+  }
+
+  #title {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 430px;
+    background-image: url("/images/banner-harbour.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 40px;
+    text-align: center;
+
+    h1, h2, h3 {
+      // font-family
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 80px;
+      margin: 20px 0 0 0;
+    }
+
+    h2 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 40px;
+      margin: 36px 0 0 0;
+    }
+
+    .button {
+      width: 240px;
+      margin: 30px 14px 0 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  #content {
+    margin-top: 370px;
+    color: #054b73;
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  #event {
+    padding: 30px;
+    background-color: white;
+  }
+
+  #tickets {
+    padding: 34px;
+    background-image: url("/images/banner-waves.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    height: 190px;
+    text-align: center;
+
+    .price {
+      font-weight: bold;
+    }
+
+    .small {
+      font-size: 0.8em;
+    }
+
+    .button {
+      width: 280px;
+      margin-top: 16px;
+    }
+  }
+
+  #structure {
+    padding: 30px;
+    background-color: white;
+
+    .intro {
+      text-align: center;
+    }
+
+    .segment {
+      width: 280px;
+      font-size: 1.4em;
+      text-align: right;
+      float: left;
+      clear: both;
+      margin-top: 20px;
+    }
+
+    .description {
+      width: 760px;
+      float: right;
+      margin-top: 20px;
+    }
+  }
+
+  #venue {
+    padding: 32px;
+    background-image: url("/images/banner-doubletree.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    height: 580px;
+    text-align: center;
+
+    .map {
+      margin: 30px auto 0 auto;
+      width: 580px;
+      height: 332px;
+      background-image: url("/images/doubletree-map.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  #speakers {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+  }
+
+  #sponsors {
+    padding: 30px;
+    height: 1840px;
+    background-image: url("/images/bg-sponsors.jpg");
+    background-repeat: no-repeat;
+    color: white;
+
+    .grid {
+      text-align: center;
+      margin: 8px 0 20px 0;
+
+      .col {
+        display: inline-block;
+        width: 180px;
+        margin: 10px 20px;
+      }
+    }
+
+    .splat {
+      width: 150px;
+      height: 140px;
+      margin: 28px 0;
+      background-image: url("/images/splat.png");
+      background-repeat: no-repeat;
+    }
+
+    .detail {
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      vertical-align: top;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .outro {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    a:link, a:active, a:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  #conduct {
+    padding: 30px;
+    background-color: white;
+  }
+
+  #contact {
+    padding: 30px;
+    height: 500px;
+    background-image: url("/images/banner-harbour.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+
+    .person {
+      display: inline-block;
+      margin: 20px 30px;
+      width: 192px;
+      padding-bottom: 230px;
+      background-image: url("/images/person-frame.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      font-size: 1.6em;
+    }
+
+    .outro {
+      margin: 40px 0;
+      font-size: 1.2em;
+    }
+
+    a:link, a:active, a:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  #tickets-end {
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+
+    .button {
+      width: 300px;
+      padding: 20px 0;
+      font-size: 1.4em;
+    }
+  }
+
+}
+
+/* vim: set ts=2 sts=2 sw=2 et: */
