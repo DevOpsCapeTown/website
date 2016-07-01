@@ -1,4 +1,18 @@
 #devopsdays {
+  div, p, h1, h2, h3, li {
+    font-family: 'Rubik', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: justify;
+  }
+
+  h1, h2, h3 {
+    text-transform: uppercase;
+    padding: 0;
+  }
+
   .button {
     display: inline-block;
     background-color: #07678c;
@@ -6,6 +20,11 @@
     font-size: 20px;
     border-radius: 6px;
     padding: 12px 0;
+    opacity: 0.8;
+  }
+
+  a.button:hover {
+    opacity: 1.0;
   }
 
   #banner .wrapper {
@@ -31,11 +50,6 @@
     background-position: center bottom;
     padding-top: 40px;
     text-align: center;
-
-    h1, h2, h3 {
-      // font-family
-      padding: 0;
-    }
 
     h1 {
       font-size: 80px;
@@ -70,7 +84,7 @@
   }
 
   #event {
-    padding: 30px;
+    padding: 50px;
     background-color: white;
   }
 
@@ -80,7 +94,10 @@
     background-repeat: no-repeat;
     color: white;
     height: 190px;
-    text-align: center;
+
+    * {
+      text-align: center;
+    }
 
     .price {
       font-weight: bold;
@@ -97,7 +114,7 @@
   }
 
   #structure {
-    padding: 30px;
+    padding: 50px 40px;
     background-color: white;
 
     .intro {
@@ -105,7 +122,7 @@
     }
 
     .segment {
-      width: 280px;
+      width: 260px;
       font-size: 1.4em;
       text-align: right;
       float: left;
@@ -121,37 +138,43 @@
   }
 
   #venue {
-    padding: 32px;
+    padding: 52px;
     background-image: url("/images/banner-doubletree.jpg");
     background-repeat: no-repeat;
     color: white;
-    height: 580px;
+    height: 540px;
     text-align: center;
 
     .map {
-      margin: 30px auto 0 auto;
+      margin: 50px auto 0 auto;
       width: 580px;
-      height: 332px;
+      height: 352px;
       background-image: url("/images/doubletree-map.png");
       background-repeat: no-repeat;
     }
   }
 
   #speakers {
-    padding: 30px;
+    padding: 40px;
     background-color: white;
-    text-align: center;
+
+    * {
+      text-align: center;
+    }
   }
 
   #sponsors {
-    padding: 30px;
-    height: 1840px;
+    padding: 50px;
+    height: 1800px;
     background-image: url("/images/bg-sponsors.jpg");
     background-repeat: no-repeat;
     color: white;
 
-    .grid {
+    * {
       text-align: center;
+    }
+
+    .grid {
       margin: 8px 0 20px 0;
 
       .col {
@@ -169,22 +192,24 @@
       background-repeat: no-repeat;
     }
 
-    .detail {
-      display: inline-block;
-      width: 30%;
-      text-align: center;
-      vertical-align: top;
+    .row {
+      margin: 40px 0;
 
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+      .detail {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
       }
     }
 
     .outro {
-      margin-top: 60px;
-      text-align: center;
+      margin-top: 80px;
     }
 
     a:link, a:active, a:visited {
@@ -194,17 +219,24 @@
   }
 
   #conduct {
-    padding: 30px;
+    padding: 40px;
     background-color: white;
+
+    h2 {
+      margin-top: 40px;
+    }
   }
 
   #contact {
-    padding: 30px;
-    height: 500px;
+    padding: 50px;
+    height: 440px;
     background-image: url("/images/banner-harbour.jpg");
     background-repeat: no-repeat;
     color: white;
-    text-align: center;
+
+    * {
+      text-align: center;
+    }
 
     .person {
       display: inline-block;
