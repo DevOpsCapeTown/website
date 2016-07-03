@@ -1,5 +1,7 @@
 ---
 script: bundle exec jekyll build
-after_success: ./deploy.sh
+after_success:
+  - pip install awscli
+  - ./deploy.sh
 
 # vim: set ts=2 sts=2 sw=2 et:
