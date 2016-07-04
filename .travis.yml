@@ -3,7 +3,7 @@ language: ruby
 cache: bundler
 script: bundle exec jekyll build
 after_success:
-  - sudo pip install awscli
+  - sudo pip install awscli pyopenssl
   - ./deploy.sh
 
 # vim: set ts=2 sts=2 sw=2 et:
