@@ -33,11 +33,10 @@
   }
 
   #banner-image {
-    left: -40px;
-    top: 40px;
+    background-position: -40px 40px;
     background-image: url("/images/dod-banner-plain-1200.png");
     opacity: inherit;
-    width: 1200px;
+    overflow: hidden;
   }
 
   #title {
