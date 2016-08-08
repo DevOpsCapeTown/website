@@ -8,10 +8,6 @@
     text-align: justify;
   }
 
-  footer p {
-    font-size: 18px;
-  }
-
   h1, h2, h3 {
     text-transform: uppercase;
     padding: 0;
@@ -31,8 +27,8 @@
     opacity: 1.0;
   }
 
-  #header-icons {
-    top: 37px;
+  #banner {
+    position: relative;
   }
 
   #banner .wrapper {
@@ -41,6 +37,7 @@
   }
 
   #banner-image {
+    position: absolute;
     background-position: -40px 40px;
     background-image: url("/images/dod-banner-plain-1200.png");
     opacity: inherit;
@@ -48,14 +45,13 @@
   }
 
   #title {
-    position: absolute;
-    top: 300px;
+    margin-top: 300px;
     width: 100%;
-    height: 430px;
     background-image: url("/images/banner-harbour.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     padding-top: 40px;
+    padding-bottom: 30px;
     text-align: center;
 
     h1 {
@@ -81,7 +77,6 @@
   }
 
   #content {
-    margin-top: 370px;
     color: #054b73;
 
     h1 {
@@ -189,12 +184,6 @@
         width: 180px;
         margin: 10px 20px;
       }
-
-      img {
-        max-width: 150px;
-        max-height: 150px;
-        border: 0;
-      }
     }
 
     .splat {
@@ -244,7 +233,7 @@
     }
   }
 
-  #organisers {
+  #contact {
     padding: 50px;
     height: 440px;
     background-image: url("/images/banner-harbour.jpg");
@@ -259,40 +248,11 @@
       display: inline-block;
       margin: 20px 30px;
       width: 192px;
-      padding-bottom: 20px;
+      padding-bottom: 230px;
+      background-image: url("/images/person-frame.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
       font-size: 1.6em;
-
-      .avatar {
-        width: 192px;
-        height: 200px;
-        margin-top: 20px;
-        background-position: 8px 8px;
-        background-repeat: no-repeat;
-
-        span {
-          display: inline-block;
-          width: 192px;
-          height: 200px;
-          background-image: url("/images/person-frame.png");
-          background-repeat: no-repeat;
-        }
-      }
-
-      .cobus {
-        background-image: url("/images/cobus-avatar.jpg");
-      }
-
-      .adrian {
-        background-image: url("/images/adrian-avatar.jpg");
-      }
-
-      .tom {
-        background-image: url("/images/tom-avatar.jpg");
-      }
-
-      .julia {
-        background-image: url("/images/julia-avatar.jpg");
-      }
     }
 
     .outro {
@@ -322,7 +282,6 @@
     padding: 40px;
     background-color: white;
   }
-
 }
 
 /* vim: set ts=2 sts=2 sw=2 et: */

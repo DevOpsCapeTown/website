@@ -30,16 +30,16 @@
         <div class="wrapper">
           <a id="logo-small" href="/"></a>
           <nav id="header-nav">
-            <a href="#" class="menu-icon"><i class="fa fa-bars"></i></a>
+            <a href="/devopsdays/#" class="menu-icon"><i class="fa fa-bars"></i></a>
             <div class="trigger">
-              <a class="page-link" href="#event">Event</a>
-              <a class="page-link" href="#tickets">Tickets</a>
-              <a class="page-link" href="#structure">Structure</a>
-              <a class="page-link" href="#venue">Venue</a>
-              <a class="page-link" href="#speakers">Speakers</a>
-              <a class="page-link" href="#sponsors">Sponsors</a>
-              <a class="page-link" href="#conduct">Conduct</a>
-              <a class="page-link" href="#contact">Contact</a>
+              <a class="page-link" href="/devopsdays/#event">Event</a>
+              <a class="page-link" href="/devopsdays/#tickets">Tickets</a>
+              <a class="page-link" href="/devopsdays/#structure">Structure</a>
+              <a class="page-link" href="/devopsdays/#venue">Venue</a>
+              <a class="page-link" href="/devopsdays/#speakers">Speakers</a>
+              <a class="page-link" href="/devopsdays/#sponsors">Sponsors</a>
+              <a class="page-link" href="/devopsdays/#conduct">Conduct</a>
+              <a class="page-link" href="/devopsdays/#organisers">Organisers</a>
             </div>
           </nav>
           <div id="header-icons">
@@ -54,10 +54,11 @@
             <h1>DevOpsDays</h1>
             <h2>Cape Town<br>2016</h2>
             <h3>7 &amp; 8 November</h3>
+            {% if page.show_header_buttons == true %}
             <div>
-              <a href="https://www.quicket.co.za/" class="button">Book Tickets</a>
-              <a href="#speakers" class="button">Programme</a>
+              <a href="tickets.html" class="button">Book Tickets</a>
             </div>
+            {% endif %}
           </div>
           <div id="banner-image"></div>
         </div>
