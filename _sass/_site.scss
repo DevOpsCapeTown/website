@@ -282,6 +282,10 @@ a {
     background-image: url("/images/calendar-white.png");
     background-position: center 10px;
     background-repeat: no-repeat;
+
+    a {
+      color: inherit;
+    }
   }
 
   .date {
