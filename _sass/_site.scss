@@ -286,6 +286,10 @@ a {
     a {
       color: inherit;
     }
+
+    a:hover .title {
+      text-decoration: underline;
+    }
   }
 
   .date {
