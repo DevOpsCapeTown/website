@@ -99,7 +99,7 @@ echo Create CloudFront distribution
   "Logging": {
     "Enabled": true,
     "IncludeCookies": true,
-    "Bucket": "devopscapetown-cloudfront-logs.s3.amazonaws.com",
+    "Bucket": "devopscapetown-cloudfront.s3.amazonaws.com",
     "Prefix": "${DOMAIN}"
   },
   "Origins": {
