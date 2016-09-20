@@ -108,7 +108,7 @@ echo Create CloudFront distribution
 }
 EOF
 aws configure set preview.cloudfront true
-[ -z "$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] | contains(\"${DOMAIN}\"))")" ] && \
+[ -z "$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] == \"${DOMAIN}\")")" ] && \
   aws cloudfront create-distribution --distribution-config "${CLOUDFRONT_CONFIG}"
 
 echo Create DNS record
@@ -122,7 +122,7 @@ echo Create DNS record
         "Type": "A",
         "AliasTarget": {
           "HostedZoneId": "Z2FDTNDATAQYW2",
-          "DNSName": "$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] | contains(\"${DOMAIN}\")) | .DomainName")",
+          "DNSName": "$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] == \"${DOMAIN}\") | .DomainName")",
           "EvaluateTargetHealth": false
         }
       }
