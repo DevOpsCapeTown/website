@@ -1,0 +1,328 @@
+#devopsdays {
+  div, p, h1, h2, h3, li {
+    font-family: 'Rubik', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: justify;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  h1, h2, h3 {
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #07678c;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 12px 0;
+    opacity: 0.8;
+  }
+
+  a.button:hover {
+    opacity: 1.0;
+  }
+
+  #header-icons {
+    top: 37px;
+  }
+
+  #banner .wrapper {
+    background-color: #1c252a;
+    height: 400px;
+  }
+
+  #banner-image {
+    background-position: -40px 40px;
+    background-image: url("/images/dod-banner-plain-1200.png");
+    opacity: inherit;
+    overflow: hidden;
+  }
+
+  #title {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 430px;
+    background-image: url("/images/banner-harbour.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 40px;
+    text-align: center;
+
+    h1 {
+      font-size: 80px;
+      margin: 20px 0 0 0;
+    }
+
+    h2 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 40px;
+      margin: 36px 0 0 0;
+    }
+
+    .button {
+      width: 240px;
+      margin: 30px 14px 0 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  #content {
+    margin-top: 370px;
+    color: #054b73;
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  #event {
+    padding: 50px;
+    background-color: white;
+  }
+
+  #tickets {
+    padding: 34px;
+    background-image: url("/images/banner-waves.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    height: 190px;
+
+    * {
+      text-align: center;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    .small {
+      font-size: 0.8em;
+    }
+
+    .button {
+      width: 280px;
+      margin-top: 16px;
+    }
+  }
+
+  #structure {
+    padding: 50px 40px;
+    background-color: white;
+
+    .intro {
+      text-align: center;
+    }
+
+    .segment {
+      width: 260px;
+      font-size: 1.4em;
+      text-align: right;
+      float: left;
+      clear: both;
+      margin-top: 20px;
+    }
+
+    .description {
+      width: 760px;
+      float: right;
+      margin-top: 20px;
+    }
+  }
+
+  #venue {
+    padding: 52px;
+    background-image: url("/images/banner-doubletree.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    height: 540px;
+    text-align: center;
+
+    .map {
+      margin: 50px auto 0 auto;
+      width: 580px;
+      height: 352px;
+      background-image: url("/images/doubletree-map.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  #speakers {
+    padding: 40px;
+    background-color: white;
+
+    * {
+      text-align: center;
+    }
+  }
+
+  #sponsors {
+    padding: 50px;
+    height: 1800px;
+    background-image: url("/images/bg-sponsors.jpg");
+    background-repeat: no-repeat;
+    color: white;
+
+    * {
+      text-align: center;
+    }
+
+    .grid {
+      margin: 8px 0 20px 0;
+
+      .col {
+        display: inline-block;
+        width: 180px;
+        margin: 10px 20px;
+      }
+
+      img {
+        max-width: 150px;
+        max-height: 150px;
+        border: 0;
+      }
+    }
+
+    .splat {
+      width: 150px;
+      height: 140px;
+      margin: 28px 0;
+      background-image: url("/images/splat.png");
+      background-repeat: no-repeat;
+    }
+
+    .row {
+      margin: 40px 0;
+
+      .detail {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    .outro {
+      margin-top: 80px;
+    }
+
+    a:link, a:active, a:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  #conduct {
+    padding: 40px;
+    background-color: white;
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  #organisers {
+    padding: 50px;
+    height: 440px;
+    background-image: url("/images/banner-harbour.jpg");
+    background-repeat: no-repeat;
+    color: white;
+
+    * {
+      text-align: center;
+    }
+
+    .person {
+      display: inline-block;
+      margin: 20px 30px;
+      width: 192px;
+      padding-bottom: 20px;
+      font-size: 1.6em;
+
+      .avatar {
+        width: 192px;
+        height: 200px;
+        margin-top: 20px;
+        background-position: 8px 8px;
+        background-repeat: no-repeat;
+
+        span {
+          display: inline-block;
+          width: 192px;
+          height: 200px;
+          background-image: url("/images/person-frame.png");
+          background-repeat: no-repeat;
+        }
+      }
+
+      .cobus {
+        background-image: url("/images/cobus-avatar.jpg");
+      }
+
+      .adrian {
+        background-image: url("/images/adrian-avatar.jpg");
+      }
+
+      .tom {
+        background-image: url("/images/tom-avatar.jpg");
+      }
+
+      .julia {
+        background-image: url("/images/julia-avatar.jpg");
+      }
+    }
+
+    .outro {
+      margin: 40px 0;
+      font-size: 1.2em;
+    }
+
+    a:link, a:active, a:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  #tickets-end {
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+
+    .button {
+      width: 300px;
+      padding: 20px 0;
+      font-size: 1.4em;
+    }
+  }
+
+  #buy-tickets {
+    padding: 40px;
+    background-color: white;
+  }
+
+}
+
+/* vim: set ts=2 sts=2 sw=2 et: */

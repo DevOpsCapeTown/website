@@ -14,5 +14,6 @@ youtube_channel: UCuu8jzt29J5rfGvo1cBiuog
 
 # Build settings
 markdown: kramdown
+exclude: [deploy.sh, Gemfile, Gemfile.lock, README.md, vendor]
 
 # vim: set ts=2 sts=2 sw=2 et:

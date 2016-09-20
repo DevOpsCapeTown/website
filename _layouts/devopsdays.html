@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DevOpsDays Cape Town 2016</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <script type="text/javascript">
+      window.onload = function() {
+        var links = document.links;
+
+        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+          if (links[i].hostname != window.location.hostname) {
+            links[i].target = '_blank';
+          } 
+        }
+      }
+    </script>
+  </head>
+  <body id="devopsdays">
+    <header>
+
+      <div id="header-bar">
+        <div class="wrapper">
+          <a id="logo-small" href="/"></a>
+          <nav id="header-nav">
+            <a href="/devopsdays/#" class="menu-icon"><i class="fa fa-bars"></i></a>
+            <div class="trigger">
+              <a class="page-link" href="/devopsdays/#event">Event</a>
+              <a class="page-link" href="/devopsdays/#tickets">Tickets</a>
+              <a class="page-link" href="/devopsdays/#structure">Structure</a>
+              <a class="page-link" href="/devopsdays/#venue">Venue</a>
+              <a class="page-link" href="/devopsdays/#speakers">Speakers</a>
+              <a class="page-link" href="/devopsdays/#sponsors">Sponsors</a>
+              <a class="page-link" href="/devopsdays/#conduct">Conduct</a>
+              <a class="page-link" href="/devopsdays/#organisers">Organisers</a>
+            </div>
+          </nav>
+          <div id="header-icons">
+            <a href="https://twitter.com/devopsdayscpt" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="banner">
+        <div class="wrapper">
+          <div id="title">
+            <h1>DevOpsDays</h1>
+            <h2>Cape Town<br>2016</h2>
+            <h3>7 &amp; 8 November</h3>
+            {% if page.show_header_buttons == true %}
+            <div>
+              <a href="tickets.html" class="button">Book Tickets</a>
+            </div>
+            {% endif %}
+          </div>
+          <div id="banner-image"></div>
+        </div>
+      </div>
+
+    </header>
+
+    <div id="content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+
+      <footer>
+        <div class="wrapper">
+          <div class="col col-1">
+            <ul class="contact-list">
+              <li><h2>{{ site.title }}</h2></li>
+              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            </ul>
+          </div>
+          <div class="col col-2">
+          </div>
+          <div class="col col-3">
+            <p>{{ site.description }}</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </footer>
+    </div>
+  </body>
+</html>
