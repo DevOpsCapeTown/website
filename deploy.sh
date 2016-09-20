@@ -19,6 +19,33 @@ esac
 REGION="${AWS_DEFAULT_REGION}"
 DIR="$(cd `dirname "$0"` && pwd)"
 
+echo Create the S3 bucket
+aws s3 ls "s3://${DOMAIN}" &> /dev/null || \
+  (aws s3 mb "s3://${DOMAIN}" && sleep 5)
+
+echo Set the bucket policy
+! read -r -d '' S3_POLICY <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AddPerm",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::${DOMAIN}/*"
+    }
+  ]
+}
+EOF
+aws s3api put-bucket-policy --bucket "${DOMAIN}" --policy "${S3_POLICY}"
+
+echo Configure static website
+aws s3 website "s3://${DOMAIN}" --index-document index.html --error-document 404.html
+
+echo Sync files
+aws s3 sync --delete "${DIR}/_site/" "s3://${DOMAIN}/"
+
 echo Create CloudFront distribution
 ! read -r -d '' CLOUDFRONT_CONFIG <<EOF
 {
@@ -131,32 +158,5 @@ echo Create DNS record
 }
 EOF
 aws route53 change-resource-record-sets --hosted-zone-id "${AWS_HOSTED_ZONE_ID}" --change-batch "${ROUTE53_CHANGES}"
-
-echo Create the S3 bucket
-aws s3 ls "s3://${DOMAIN}" &> /dev/null || \
-  (aws s3 mb "s3://${DOMAIN}" && sleep 5)
-
-echo Set the bucket policy
-! read -r -d '' S3_POLICY <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AddPerm",
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::${DOMAIN}/*"
-    }
-  ]
-}
-EOF
-aws s3api put-bucket-policy --bucket "${DOMAIN}" --policy "${S3_POLICY}"
-
-echo Configure static website
-aws s3 website "s3://${DOMAIN}" --index-document index.html --error-document 404.html
-
-echo Sync files
-aws s3 sync --delete "${DIR}/_site/" "s3://${DOMAIN}/"
 
 # vim: set ts=2 sts=2 sw=2 et:
