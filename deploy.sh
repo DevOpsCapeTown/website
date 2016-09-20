@@ -2,7 +2,12 @@
 
 set -e
 
-case "${TRAVIS_BRANCH}" in
+[ -n "${TRAVIS_BRANCH}" ] && BRANCH="${TRAVIS_BRANCH}"
+
+case "${BRANCH}" in
+  production)
+    DOMAIN="devops.capetown"
+    ;;
   staging)
     DOMAIN="staging.devops.capetown"
     ;;
@@ -25,7 +30,7 @@ echo Create CloudFront distribution
     "Quantity": 0
   },
   "CallerReference": "${DOMAIN}",
-  "Comment": "DevOps Cape Town website",
+  "Comment": "DevOps Cape Town website (${BRANCH})",
   "CustomErrorResponses": {
     "Quantity": 0
   },
