@@ -169,8 +169,76 @@
     padding: 40px;
     background-color: white;
 
-    * {
+    h1 {
       text-align: center;
+    }
+
+    .grid {
+      .speaker {
+        clear: both;
+        padding: 20px 0 20px 0;
+
+        .avatar {
+          width: 220px;
+          height: 240px;
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 8px;
+        }
+
+        .avatar.dale-humby {
+          background-image: url("/images/speakers/dale-humby.jpg");
+        }
+
+        .avatar.daniel-maher {
+          background-image: url("/images/speakers/daniel-maher.jpg");
+        }
+
+        .avatar.jp-viljoen {
+          background-image: url("/images/speakers/jp-viljoen.jpg");
+        }
+
+        .avatar.noa-resare {
+          background-image: url("/images/speakers/noa-resare.jpg");
+        }
+
+        .avatar.seth-vargo {
+          background-image: url("/images/speakers/seth-vargo.jpg");
+        }
+
+        .avatar.spencer-krum {
+          background-image: url("/images/speakers/spencer-krum.jpg");
+        }
+
+        .bio {
+          p {
+            font-size: 14pt;
+          }
+        }
+      }
+
+      .speaker:nth-child(odd) {
+        .avatar {
+          float: left;
+          margin: 0 10px 10px 0;
+        }
+
+        .bio {
+          padding-left: 240px;
+        }
+      }
+
+      .speaker:nth-child(even) {
+        .avatar {
+          float: right;
+          margin: 0 0 10px 10px;
+        }
+
+        .bio {
+          padding-right: 240px;
+        }
+      }
     }
   }
 
