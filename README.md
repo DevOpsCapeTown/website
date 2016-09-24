@@ -2,9 +2,13 @@
 
 This is the website for Cape Town DevOps ([devops.capetown](https://devops.capetown)). Contributions are welcome.
 
-## Contributing
+## Developing
 
 This site is built using the [Jekyll site generator](https://jekyllrb.com/) and hosted on Amazon S3 with Amazon CloudFront. 
+To install dependencies, run `bundle`. To build and serve the site locally, run `bundle exec jekyll serve`.
+
+## Contributing
+
 Travis CI handles builds and runs for each latest commit pushed to the repository. To contribute changes:
 
 1. Create a branch from the latest `develop` branch, commit your changes and open a PR against the `develop` branch.

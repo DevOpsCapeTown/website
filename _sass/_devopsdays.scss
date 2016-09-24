@@ -182,41 +182,49 @@
     }
 
     .grid {
-      margin: 8px 0 20px 0;
+      margin: 8px 0 10px 0;
 
       .col {
         display: inline-block;
+        vertical-align: top;
         width: 180px;
         margin: 10px 20px;
       }
 
+      .sponsor {
+        width: 150px;
+        height: 180px;
+        margin: 16px auto
+      }
+
+      .splat {
+        background-image: url("/images/splat.png");
+        background-repeat: no-repeat;
+      }
+
       img {
         max-width: 150px;
-        max-height: 150px;
+        max-height: 180px;
         border: 0;
       }
     }
 
-    .splat {
-      width: 150px;
-      height: 140px;
-      margin: 28px 0;
-      background-image: url("/images/splat.png");
-      background-repeat: no-repeat;
-    }
+    .prospectus {
+      padding-top: 10px;
 
-    .row {
-      margin: 40px 0;
+      .row {
+        margin: 40px 0;
 
-      .detail {
-        display: inline-block;
-        width: 30%;
-        vertical-align: top;
+        .detail {
+          display: inline-block;
+          width: 30%;
+          vertical-align: top;
 
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
