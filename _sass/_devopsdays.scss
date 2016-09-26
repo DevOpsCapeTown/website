@@ -212,6 +212,14 @@
         }
 
         .bio {
+          .fa-github {
+            color: #303030;
+          }
+
+          a:hover .fa-github {
+            color: #606060;
+          }
+
           p {
             font-size: 14pt;
           }
