@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="icon" type="image/png" href="/images/dod_favicon.png">
     <script type="text/javascript">
       window.onload = function() {
         var links = document.links;
@@ -18,7 +19,7 @@
         for (var i = 0, linksLength = links.length; i < linksLength; i++) {
           if (links[i].hostname != window.location.hostname) {
             links[i].target = '_blank';
-          } 
+          }
         }
       }
     </script>
