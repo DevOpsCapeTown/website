@@ -4,7 +4,7 @@ title: "Next Meetup: Terraform + Ansible experience report - Robert Stuttaford"
 date: 2016-10-13 17:00:00 +0200
 type: event
 event:
-  date: 2016-10-27 18:00:00
+  date: 2016-10-27 18:30:00
   venue: 22seven
   speaker: Robert Stuttaford
   topic: Terraform + Ansible experience report
