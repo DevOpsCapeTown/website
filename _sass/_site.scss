@@ -1,9 +1,9 @@
 body {
-  font-family: $base-font-family;
+  font-family: 'Rubik', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   color: $text-color;
-  background-color: black;
+  //background-color: black;
 }
 
 body, h4, h5, h6,
@@ -322,13 +322,14 @@ a {
 }
 
 #content {
-  background-color: black;
+  //background-color: black;
 }
 
 #home {
-  background-color: #1f292d;
-  background: linear-gradient(#1f292d, #353b3b);
-  color: white;
+  //background-color: #1f292d;
+  //background: linear-gradient(#1f292d, #353b3b);
+  background-color: white;
+  color: #303040;
   padding: 30px 20px;
 
   .posts {
@@ -430,6 +431,48 @@ a {
   background-color: white;
   color: #333;
   padding: 20px 20px 60px 20px;
+}
+
+#content {
+  padding: 20px;
+}
+
+#landing {
+  margin: auto;
+
+  div.home-link a {
+    display: block;
+    height: 200px;
+
+    clear: left;
+
+    img {
+      display: block;
+      float: left;
+      max-width: 300px;
+      padding-right: 20px;
+    }
+    div {
+      display: block;
+      float: left;
+      height: 150px;
+
+      h1, h2 {
+        padding: 0;
+      }
+
+      h1 {
+        margin: 20px 0 12px 0;
+        font-size: 22pt;
+        font-weight: bold;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 14pt;
+      }
+    }
+  }
 }
 
 /* vim: set ts=2 sts=2 sw=2 et: */
